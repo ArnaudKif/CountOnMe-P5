@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Calc" translatesAutoresizingMaskIntoConstraints="NO" id="CcC-HJ-JY2">
+                                <rect key="frame" x="122" y="301" width="170" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CcC-HJ-JY2" secondAttribute="height" multiplier="85:147" id="Clh-uv-BgS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountOnMe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNw-M5-i4A">
+                                <rect key="frame" x="146" y="625" width="122.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LTm-Su-rz6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="21"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LNw-M5-i4A" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5K6-wR-UEt"/>
+                            <constraint firstItem="CcC-HJ-JY2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="l0J-Kk-lQe"/>
+                            <constraint firstItem="CcC-HJ-JY2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oh9-y9-zO2"/>
+                            <constraint firstItem="LNw-M5-i4A" firstAttribute="top" secondItem="CcC-HJ-JY2" secondAttribute="bottom" constant="30" id="xUl-kr-ouK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Calc" width="169.5" height="293.5"/>
+    </resources>
+</document>
