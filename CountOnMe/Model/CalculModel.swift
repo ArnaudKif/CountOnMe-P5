@@ -82,7 +82,7 @@ return elements.count > 2 && elements[elements.count - 2] == "="
     } // end of acButtonMultiTaped
 
     func equalButtonTaped() {
-        if expressionIsCorrect && elements.firstIndex(of: "=") == nil {
+        if expressionIsCorrect && elements.firstIndex(of: "=") == nil && elements.count != 0 {
             let result = makeTheCalcul()
             calculText.append("\(space)=\(space)\(result)")
         } else { sendAlertNotification(message: "Impossible ! Erreur de synthaxe dans votre opération. Veuillez entrer un chiffre ou corriger avec la touche AC.")}
