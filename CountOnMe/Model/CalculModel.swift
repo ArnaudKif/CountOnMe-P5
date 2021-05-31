@@ -128,7 +128,6 @@ class CalculModel {
         return elements.last != "+" && elements.last != "-" && elements.last != "x" && elements.last != "÷" && elements.last != "="
     } // end of expressionIsCorrect
 
-
     var secondToLastIsEqual: Bool {
 return elements.count > 2 && elements[elements.count - 2] == "="
     } // end of secondToLastIsNotEqual
