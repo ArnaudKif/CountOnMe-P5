@@ -9,7 +9,7 @@
 import Foundation
 
 class CalculModel {
-    let space = " "
+    private let space = " "
 
     var calculText: String = "1 + 1 = 2" {
         didSet {
@@ -18,14 +18,14 @@ class CalculModel {
     } // end of calculText
 
     /// Transforms calculText into an array of Strings using the spaces between each character to separate them
-    var elements : [String] {
+    private var elements : [String] {
         return calculText.split(separator: " ").map { "\($0)" }
     } // end of elements
 
     // MARK: - Error check computed variables
 
     /// This boolean check that the text does not end with + or - or x or ÷ or =
-    var expressionIsCorrect: Bool {
+    private var expressionIsCorrect: Bool {
         return elements.last != "+" && elements.last != "-" && elements.last != "x" && elements.last != "÷" && elements.last != "="
     } // end of expressionIsCorrect
 
@@ -34,7 +34,7 @@ class CalculModel {
 return elements.count > 2 && elements[elements.count - 2] == "="
     } // end of secondToLastIsNotEqual
 
-    func sendAlertNotification(message : String) {
+    private func sendAlertNotification(message : String) {
         let alertName = Notification.Name("alertDisplay")
         NotificationCenter.default.post(name: alertName, object: nil, userInfo: ["message": message])
     } // end of sendAlertNotification
@@ -103,19 +103,19 @@ return elements.count > 2 && elements[elements.count - 2] == "="
     } // end of removeLastElement
 
     /// This function clear the text
-    func clearCalculText() {
+    private func clearCalculText() {
         calculText = ""
     } // end of clearCalculText
 
     /// This function takes the last element of elements and replaces all the text with this one
-    func lastResultIsCalculText() {
+    private func lastResultIsCalculText() {
         let lastResult = elements.last!
         clearCalculText()
         calculText.append("\(lastResult)")
     } // end fo lastResultIsCalculText
 
     /// This function reverses the last number entered by adding - or deleting
-    func inverseLastNumber() {
+    private func inverseLastNumber() {
         var textCalcul = elements
         guard textCalcul != [] else { return }
         if expressionIsCorrect {
@@ -137,7 +137,7 @@ return elements.count > 2 && elements[elements.count - 2] == "="
     // MARK: - Calcul Methods
 
     /// This function calculates the result of the operation
-    func makeTheCalcul() -> String {
+    private func makeTheCalcul() -> String {
         var operationsToReduce = elements
         var priorityOperator: Bool {
             return (operationsToReduce.firstIndex(of: "x") != nil) || (operationsToReduce.firstIndex(of: "÷") != nil)
@@ -181,7 +181,7 @@ return elements.count > 2 && elements[elements.count - 2] == "="
     } // end of makeTheCalcul
 
     /// This function formats a Double into a String with or without the comma as required
-    func doubleToInteger(currentResult: Double) -> String {
+    private func doubleToInteger(currentResult: Double) -> String {
         let doubleAsString = NumberFormatter.localizedString(from: (NSNumber(value: currentResult)), number: .decimal)
         return doubleAsString
     } // end of doubleToInteger

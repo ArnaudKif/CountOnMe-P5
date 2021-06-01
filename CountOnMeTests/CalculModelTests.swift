@@ -17,7 +17,7 @@ class CalculModelTests: XCTestCase {
         super.setUp()
         calcul = CalculModel()
     }
-    func testGivenTaped3and2_whenTapedEqual_ThenResultIs5() {
+    func testGivenTaped3Plus2_WhenTapedEqual_ThenResultIs5() {
 
         calcul.numberButtonTaped(butttonTitle: "3")
         calcul.operatorButtonTaped(operatorString: "+")
@@ -26,14 +26,14 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "3 + 2 = 5")
     }
 
-    func testGiven3more2_whenTapedEqual_ThenResultIs1() {
+    func testGiven3Less2_WhenTapedEqual_ThenResultIs1() {
         calcul.numberButtonTaped(butttonTitle: "3")
         calcul.operatorButtonTaped(operatorString: "-")
         calcul.numberButtonTaped(butttonTitle: "2")
         calcul.equalButtonTaped()
         XCTAssertEqual(calcul.calculText, "3 - 2 = 1")
     }
-    func testGivenTaped3mutli2_whenTapedEqual_ThenResultIs6() {
+    func testGivenTaped3MutlipliedBy2_WhenTapedEqual_ThenResultIs6() {
 
         calcul.numberButtonTaped(butttonTitle: "3")
         calcul.operatorButtonTaped(operatorString: "x")
@@ -42,7 +42,7 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "3 x 2 = 6")
     }
 
-    func testGivenTaped6divise3_whenTapedEqual_ThenResultIs2() {
+    func testGivenTaped6DividedBy3_WhenTapedEqual_ThenResultIs2() {
         calcul.numberButtonTaped(butttonTitle: "6")
         calcul.operatorButtonTaped(operatorString: "÷")
         calcul.numberButtonTaped(butttonTitle: "3")
@@ -50,7 +50,7 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "6 ÷ 3 = 2")
     }
 
-    func testGivenTaped1and3div1_whenTapedEqualAndInverse_ThenResultIs_4() {
+    func testGivenTaped1Plus3DividedBy1_WhenTapedEqual_ThenResultIs4() {
         calcul.numberButtonTaped(butttonTitle: "1")
         calcul.operatorButtonTaped(operatorString: "+")
         calcul.numberButtonTaped(butttonTitle: "3")
@@ -60,13 +60,13 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "1 + 3 ÷ 1 = 4")
     }
 
-    func testBigOperation() {
+    func testGivenBigOperation_WhenTapedEqual_ThenResultIs1() {
         calcul.calculText = "5 + 6 ÷ 3 - 2 x 3"
         calcul.equalButtonTaped()
         XCTAssertEqual(calcul.calculText, "5 + 6 ÷ 3 - 2 x 3 = 1")
     }
 
-    func testGivenTaped1_whenInverse_ThenResultIs_1() {
+    func testGivenTaped1_WhenInverse2Times_ThenResultIs1() {
         calcul.numberButtonTaped(butttonTitle: "1")
         calcul.inverseButtonTaped()
         calcul.inverseButtonTaped()
@@ -74,7 +74,7 @@ class CalculModelTests: XCTestCase {
         XCTAssertFalse(calcul.secondToLastIsEqual)
     }
 
-    func testGiven_whenInverse_ThenResultIs_2() {
+    func testGiven_WhenTapedInverse_ThenResultIs_2() {
         calcul.inverseButtonTaped()
         XCTAssertEqual(calcul.calculText, "  -2")
     }
@@ -86,7 +86,7 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "1 + ")
     }
 
-    func testGiven1and2More_WhenACButtton_Then1and2() {
+    func testGivenTaped1Plus2_WhenACButtton_ThenResultIs1Plus() {
         calcul.numberButtonTaped(butttonTitle: "1")
         calcul.operatorButtonTaped(operatorString: "+")
         calcul.numberButtonTaped(butttonTitle: "2")
@@ -94,7 +94,7 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, " 1 + ")
     }
 
-    func testGiven1and2More_WhenACButttonMulti_ThenEmpty() {
+    func testGiven1Plus2More_WhenTapedACButttonMulti_ThenEmpty() {
         calcul.numberButtonTaped(butttonTitle: "1")
         calcul.operatorButtonTaped(operatorString: "+")
         calcul.numberButtonTaped(butttonTitle: "2")
@@ -102,21 +102,21 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "")
     }
 
-    func testGivenPointButtonAnd1When_WhenResult() {
+    func testGivenPointButtonAnd1When_ThenResult0Coma1() {
         calcul.acButtonMultiTaped()
         calcul.pointButtonTaped()
         calcul.numberButtonTaped(butttonTitle: "1")
         XCTAssertEqual(calcul.calculText, "0.1")
     }
 
-    func testGivenOperatorAn1_WhenEqual_ThenResult() {
+    func testGivenOperatorPlus1_WhenEqual_ThenResultIs3() {
         calcul.operatorButtonTaped(operatorString: "+")
         calcul.numberButtonTaped(butttonTitle: "1")
         calcul.equalButtonTaped()
         XCTAssertEqual(calcul.calculText, "2 + 1 = 3")
     }
 
-    func testGivenRemoveLastIftextIsEmpty() {
+    func testGivenRemoveLastIfTextIsEmpty() {
         calcul.acButtonMultiTaped()
         calcul.removeLastElement()
         XCTAssertEqual(calcul.calculText, "")
@@ -124,7 +124,7 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "")
     }
 
-    func testGivenDiviseBy0_ThenError() {
+    func testGiven1DividedBy0_WhenTapedEqual_ThenError0() {
         calcul.numberButtonTaped(butttonTitle: "1")
         calcul.operatorButtonTaped(operatorString: "÷")
         calcul.numberButtonTaped(butttonTitle: "0")
@@ -132,13 +132,13 @@ class CalculModelTests: XCTestCase {
         XCTAssertEqual(calcul.calculText, "1 ÷ 0Erreur = 0")
     }
 
-    func testOperator2x() {
+    func testGivenOperator2xTaped_WhenErrorOperator() {
         calcul.operatorButtonTaped(operatorString: "÷")
         calcul.operatorButtonTaped(operatorString: "÷")
         XCTAssertEqual(calcul.calculText, "2 ÷ ")
     }
 
-    func testOperatorEqual() {
+    func testGivenTapedOperator_WhenTapedEqual_ThenErrorOperator() {
         calcul.operatorButtonTaped(operatorString: "÷")
         calcul.equalButtonTaped()
         XCTAssertEqual(calcul.calculText, "2 ÷ ")

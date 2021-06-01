@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(alertCalcul(notification:)), name: Notification.Name("alertDisplay"), object: nil)
     } // end of viewDidLoad
 
-    // MARK: - Methods
+    // MARK: - Alert Methods
     @objc func displayCalcul(notification : Notification) {
         guard let userInfo = notification.userInfo else { return }
         textView.text = userInfo["updateDisplay"] as? String
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         createAlert(message: alertInfo)
     } // end of alertCalcul
 
-    func createAlert(message: String) {
+   func createAlert(message: String) {
         let alertVC = UIAlertController(title: "Alert !", message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
