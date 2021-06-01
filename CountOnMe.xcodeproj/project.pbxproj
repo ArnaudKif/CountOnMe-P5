@@ -13,8 +13,6 @@
 		1FA43BDA224E569A00F565CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA43BD9224E569A00F565CB /* Assets.xcassets */; };
 		1FA43BDD224E569A00F565CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA43BDB224E569A00F565CB /* LaunchScreen.storyboard */; };
 		961672082664D66900BDA19A /* CalculModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961672072664D66900BDA19A /* CalculModel.swift */; };
-		961672152664E30B00BDA19A /* CountOnMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961672142664E30B00BDA19A /* CountOnMeTests.swift */; };
-		961672232664E33000BDA19A /* CountOnMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961672222664E33000BDA19A /* CountOnMeUITests.swift */; };
 		9616722B2664E35500BDA19A /* CalculModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9616722A2664E35500BDA19A /* CalculModelTests.swift */; };
 		9616722D2664E37A00BDA19A /* ViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9616722C2664E37A00BDA19A /* ViewUITests.swift */; };
 /* End PBXBuildFile section */
@@ -46,10 +44,8 @@
 		1FA43BDE224E569A00F565CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		961672072664D66900BDA19A /* CalculModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculModel.swift; sourceTree = "<group>"; };
 		961672122664E30B00BDA19A /* CountOnMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		961672142664E30B00BDA19A /* CountOnMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOnMeTests.swift; sourceTree = "<group>"; };
 		961672162664E30B00BDA19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		961672202664E33000BDA19A /* CountOnMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		961672222664E33000BDA19A /* CountOnMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOnMeUITests.swift; sourceTree = "<group>"; };
 		961672242664E33000BDA19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9616722A2664E35500BDA19A /* CalculModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculModelTests.swift; sourceTree = "<group>"; };
 		9616722C2664E37A00BDA19A /* ViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUITests.swift; sourceTree = "<group>"; };
@@ -149,7 +145,6 @@
 		961672132664E30B00BDA19A /* CountOnMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				961672142664E30B00BDA19A /* CountOnMeTests.swift */,
 				961672162664E30B00BDA19A /* Info.plist */,
 				9616722A2664E35500BDA19A /* CalculModelTests.swift */,
 			);
@@ -159,7 +154,6 @@
 		961672212664E33000BDA19A /* CountOnMeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				961672222664E33000BDA19A /* CountOnMeUITests.swift */,
 				961672242664E33000BDA19A /* Info.plist */,
 				9616722C2664E37A00BDA19A /* ViewUITests.swift */,
 			);
@@ -330,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961672152664E30B00BDA19A /* CountOnMeTests.swift in Sources */,
 				9616722B2664E35500BDA19A /* CalculModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9616722D2664E37A00BDA19A /* ViewUITests.swift in Sources */,
-				961672232664E33000BDA19A /* CountOnMeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     let calculModel = CalculModel()
 
@@ -47,9 +47,7 @@ class ViewController: UIViewController {
     // MARK: - View IBActions
 
     @IBAction func tapedNumberButton(_ sender: UIButton) {
-        guard let numberText = sender.title(for: .normal) else {
-            return
-        }
+        guard let numberText = sender.title(for: .normal) else { return }
         calculModel.numberButtonTaped(butttonTitle: numberText)
     } // end of tapedNumberButton
 

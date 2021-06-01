@@ -8,9 +8,10 @@
 
 import Foundation
 
-class CalculModel {
+final class CalculModel {
     private let space = " "
 
+    // this variable is public for the tests
     var calculText: String = "1 + 1 = 2" {
         didSet {
             NotificationCenter.default.post(name: Notification.Name("updateTextDisplay"), object: nil, userInfo: ["updateDisplay": calculText])
@@ -29,6 +30,7 @@ class CalculModel {
         return elements.last != "+" && elements.last != "-" && elements.last != "x" && elements.last != "÷" && elements.last != "="
     } // end of expressionIsCorrect
 
+    //this variable is public for the tests
     /// This boolean check the presence of = and check the number of elements in elements
     var secondToLastIsEqual: Bool {
 return elements.count > 2 && elements[elements.count - 2] == "="
@@ -88,6 +90,7 @@ return elements.count > 2 && elements[elements.count - 2] == "="
         } else { sendAlertNotification(message: "Impossible ! Erreur de synthaxe dans votre opération. Veuillez entrer un chiffre ou corriger avec la touche AC.")}
     } // end of equalButtonTaped
 
+    // this function is public for the tests
     /// This function deletes the last element of the array elements
     func removeLastElement() {
         var textCalcul = elements
