@@ -185,7 +185,13 @@ return elements.count > 2 && elements[elements.count - 2] == "="
 
     /// This function formats a Double into a String with or without the comma as required
     private func doubleToInteger(currentResult: Double) -> String {
-        let doubleAsString = NumberFormatter.localizedString(from: (NSNumber(value: currentResult)), number: .decimal)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.usesGroupingSeparator = false // delete the separator(or Space) between the numbers: For Exemple : 1000000.02 instead of 1,000,000.02
+        formatter.maximumFractionDigits = 5 // Defines the number of digits after the decimal point
+
+        let doubleAsString =  formatter.string(from: NSNumber(value: currentResult))!
+
         return doubleAsString
     } // end of doubleToInteger
 
